@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${interSans.variable} ${interSans.variable} antialiased py-[53px] px-[42px]`}
+        className={`${interSans.className}  antialiased py-[53px] px-[16px] sm:px-[42px] container mx-auto `}
       >
         <Header/>
-        <main>
+        <main className="mx-auto">
         {children}
         </main>
       </body>
