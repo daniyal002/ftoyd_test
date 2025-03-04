@@ -1,9 +1,9 @@
-import { Card } from "@/components/Card/Card";
+import { CardList } from "@/components/Card/CardList";
 
 export default function Home() {
   return (
     <>
-    <Card/>
+    <CardList />
     </>
   );
 }
