@@ -1,24 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Match Tracker
 
-## Getting Started
+Веб-приложение для отслеживания матчей в реальном времени.
 
-First, run the development server:
+## Технологии
 
+- [Next.js 14](https://nextjs.org/) - React фреймворк
+- [TypeScript](https://www.typescriptlang.org/) - Типизированный JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Утилитарный CSS фреймворк
+- [React Query](https://tanstack.com/query/latest) - Управление серверным состоянием
+- [Context API](https://react.dev/learn/passing-data-deeply-with-context) - Управление состоянием приложения
+
+## Возможности
+
+- Просмотр списка текущих матчей
+- Фильтрация матчей по статусу (Live, Finished, Match preparing)
+- Автоматическое обновление данных
+- Адаптивный дизайн для всех устройств
+
+## Начало работы
+
+1. Клонируйте репозиторий:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [https://github.com/daniyal002/ftoyd_test]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Установите зависимости:
+```bash
+npm install
+# или
+yarn install
+# или
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Запустите сервер разработки:
+```bash
+npm run dev
+# или
+yarn dev
+# или
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Откройте [http://localhost:3000](http://localhost:3000) в браузере.
+
+## Структура проекта
+
+```
+src/
+├── api/              # interseptor
+├── app/              # Роуты и страницы Next.js
+├── components/       # React компоненты
+│   ├── Card/        # Компоненты карточек матчей
+│   ├── Header/      # Компоненты заголовка
+│   └── Team/        # Компоненты команды для карточки матча
+│   └── UI/          # Переиспользуемые UI компоненты
+├── context/         # React контексты
+├── hook/            # Кастомные хуки
+└── interface/       # TypeScript интерфейсы
+└── service/         # Axios запросы
+```
+
+## API
+
+Приложение использует следующие эндпоинты:
+
+- `GET /api/matches` - Получение списка всех матчей
+
+## Скрипты
+
+- `npm run dev` - Запуск сервера разработки
+- `npm run build` - Сборка проекта
+- `npm run start` - Запуск собранного проекта
+- `npm run lint` - Проверка кода линтером
+
+## Лицензия
+
+MIT
 
 ## Learn More
 
